@@ -1,0 +1,92 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Success Stories | Denizns Ltd</title>
+    <link rel="stylesheet" href="success.css">
+</head>
+<body>
+    
+    <!-- Header (Navbar) Reused from index.html -->
+    <header id="navbar">
+        <div class="nav-container">
+            <div class="logo">
+                <a href="/index.html">
+                    <img src="/assets/company_logo.png" alt="Denizns Ltd Logo">
+                </a>
+            </div>
+            <nav class="nav-links">
+                <a href="about_us.html">About Us</a>
+                <a href="careers.html">Careers</a>
+                <a href="success_stories.html">Success Stories</a>
+                <a href="contact_us.html">Contact</a>
+            </nav>
+        </div>
+    </header>
+
+    <!-- Hero Section -->
+    <section class="hero">
+        <div class="blob-bg"></div>
+        <div class="hero-content fade-up">
+            <h1>Real Journeys. True Impact.</h1>
+            <p>Stories from individuals who found their path through Denizns.</p>
+        </div>
+    </section>
+
+    <!-- Success Grid Section -->
+    <section class="stories-section">
+        <div class="stories-grid">
+            <div class="story-card fade-up">
+                <h3>Someone1 Journey</h3>
+                <p>"I was welcomed and guided from day one. Denizns changed my life."</p>
+            </div>
+            <div class="story-card fade-up">
+                <h3>Someone2 Breakthrough</h3>
+                <p>"After months of searching, I found a purpose and a place to grow."</p>
+            </div>
+            <div class="story-card fade-up">
+                <h3>Someone3 First Role</h3>
+                <p>"Their team didn't just find me a job - they believed in me."</p>
+            </div>
+            <div class="story-card fade-up">
+                <h3>Someone4 New Chapter</h3>
+                <p>"Now I help others, just as Denizns helped me."</p>
+            </div>
+        </div>
+    </section>
+
+    <!-- CTA Section -->
+    <section class="cta-block fade-up">
+        <p>Want to be our next success story?</p>
+        <a href="index.html#cta" class="cta-button">Join Us Today</a>
+    </section>
+
+    <!-- Footer is Reused from index.html -->
+    <footer id="footer">
+        <div class="footer-content">
+            <div class="footer-links">
+                <a href="about_us.html">About Us</a>
+                <a href="careers.html">Careers</a>
+                <a href="contact_us.html">Get Started</a>
+                <a href="success_stories.html">Success Stories</a>
+            </div>
+            <p>© 2025 Denizns Ltd. All rights reserved.</p>
+        </div>
+    </footer>
+
+    <script>
+        const observer = new IntersectionObserver(entries => {
+            entries.forEach(entry => {
+                if(entry.isIntersecting){
+                    entry.target.classList.add('active');
+                }
+            });
+        });
+
+        document.querySelectorAll('.fade-up').forEach(el => {
+            observer.observe(el);
+        });
+    </script>
+</body>
+</html>

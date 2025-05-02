@@ -1,0 +1,108 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>About Us - Denizns Ltd</title>
+    <link rel="stylesheet" href="about.css">
+</head>
+<body>
+
+    <!-- Navigation Bar is reused from the index file. -->
+    <header id="navbar">
+        <div class="nav-container">
+            <div class="logo">
+                <a href="/index.html">
+                    <img src="/assets/company_logo.png" alt="Denizns Ltd Logo">
+                </a>
+            </div>
+            <nav class="nav-links">
+                <a href="about_us.html">About Us</a>
+                <a href="careers.html">Careers</a>
+                <a href="success-stories.html">Success Stories</a>
+                <a href="contact_us.html">Contact</a>
+            </nav>
+        </div>
+    </header>
+
+    <!-- Hero Section -->
+    <section class="hero">
+        <div class="blob-bg"></div>
+        <div class="hero-content fade-up">
+            <h1>Who We Are</h1>
+            <p>Empowering community through care and trust.</p>
+        </div>
+    </section>
+
+    <!-- Mission Section -->
+    <section class="mission fade-up">
+        <div class="icon-bar"></div>
+        <p>At Denizns Ltd, we believe everyone deserves compassionate career guidance - especially those beginning anew.</p>
+    </section>
+
+    <!-- Story Section -->
+    <section class="story spit fade-up">
+        <div class="story-image"></div>
+        <div class="story-text">
+            <h2>Our Story</h2>
+            <p>Denizens => Denizns - our name is born from community. Founded to serve those often overlooked, we've grown from passion to purpose, from one care home to many lives changed.</p>
+        </div>
+    </section>
+
+    <!-- Core Values Section -->
+    <section class="values">
+        <h2>Our Core Values</h2>
+        <div class="values-grid fade-up">
+            <div class="value-card">
+                <div class="icon-circle care"></div>
+                <h3>Care</h3>
+            </div>
+            <div class="value-card">
+                <div class="icon-circle trust"></div>
+                <h3>Trust</h3>
+            </div>
+            <div class="value-card">
+                <div class="icon-circle respect"></div>
+                <h3>Respect</h3>
+            </div>
+            <div class="value-card">
+                <div class="icon-circle growth"></div>
+                <h3>Growth</h3>
+            </div>
+        </div>
+    </section>
+
+    <!-- Final CTA Section -->
+     <section class="cta-block fade-up">
+        <p>Ready to join a compassionate team?</p>
+        <a href="#" class="cta-button">Find Opportunities</a>
+     </section>
+
+    <!-- Footer is also reused from the index file. -->
+    <footer id="footer">
+        <div class="footer-content">
+            <div class="footer-links">
+                <a href="about_us.html">About Us</a>
+                <a href="careers.html">Careers</a>
+                <a href="contact_us.html">Get Started</a>
+                <a href="success_stories.html">Success Stories"></a>
+            </div>
+            <p>© 2025 Denizns Ltd. All rights reserved.</p>
+        </div>
+    </footer>
+
+    <script>
+        const observer = new IntersectionObserver(entries => {
+            entries.forEach(entry => {
+                if(entry.isIntersecting){
+                    entry.target.classList.add('active');
+                }
+            });
+        });
+
+        document.querySelectorAll('.fade-up').forEach(el => {
+            observer.observe(el);
+        });
+    </script>
+</body>
+</html>

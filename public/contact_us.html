@@ -1,0 +1,88 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Contact Us | Denizns Ltd</title>
+    <link rel="stylesheet" href="contact.css">
+</head>
+<body>
+    
+    <!-- Header Reused from index.html -->
+    <header id="navbar">
+        <div class="nav-container">
+            <div class="logo">
+                <a href="/index.html">
+                    <img src="/assets/company_logo.png" alt="Denizns Ltd Logo">
+                </a>
+            </div>
+            <nav class="nav-links">
+                <a href="about_us.html">About Us</a>
+                <a href="careers.html">Careers</a>
+                <a href="success_stories.html">Success Stories</a>
+                <a href="contact_us.html">Contact</a>
+            </nav>
+        </div>
+    </header>
+
+    <!-- Contact Hero Section -->
+    <section class="hero">
+        <div class="blob-bg"></div>
+        <div class="hero-content fade-up">
+            <h1>Let's Connect</h1>
+            <p>Whether you're looking for support, opportunity, or partnership - we're here to help.</p>
+        </div>
+    </section>
+
+    <!-- Contact Form Section -->
+    <section class="contact-form-section fade-up">
+        <form class="contact-form">
+            <div class="form-group">
+                <label for="name">Full Name</label>
+                <input type="text" id="name" name="name" required>
+            </div>
+            <div class="form-group">
+                <label for="email">Email Address</label>
+                <input type="email" id="email" name="email" required>
+            </div>
+            <div class="form-group">
+                <label for="messafe">Your Message</label>
+                <textarea name="message" id="message" rows="5" required></textarea>
+            </div>
+            <button type="submit" class="cta-button">Send Message</button>
+        </form>
+    </section>
+
+    <!-- Embedded Map -->
+    <section class="map-section fade-up">
+        <iframe src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d2454.2091121790977!2d-0.7658543233479387!3d52.03950427193913!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x4877ab7ce4658211%3A0xbaa6cced53c3295c!2sDenizns%20Ltd!5e0!3m2!1sen!2suk!4v1746174331160!5m2!1sen!2suk" allowfullscreen="" loading="lazy"></iframe>
+    </section>
+
+    <!-- Footer -->
+    <footer id="footer">
+        <div class="footer-content">
+            <div class="footer-links">
+                <a href="about_us.html">About Us</a>
+                <a href="careers.html">Careers</a>
+                <a href="contact_us.html">Get Started</a>
+                <a href="success_stories.html">Success Stories</a>
+            </div>
+            <p>© 2025 Denizns Ltd. All rights reserved.</p>
+        </div>
+    </footer>
+    
+    <script>
+        const observer = new IntersectionObserver(entries => {
+            entries.forEach(entry => {
+                if(entry.isIntersecting){
+                    entry.target.classList.add('active');
+                }
+            });
+        });
+
+        document.querySelectorAll('.fade-up').forEach(el => {
+            observer.observe(el);
+        });
+    </script>
+</body>
+</html>

@@ -1,0 +1,93 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Careers | Denizns Ltd</title>
+    <link rel="stylesheet" href="careers.css">
+    <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Poppins:wght@400;600&display=swap">
+</head>
+<body>
+    
+    <!-- Header Reused from index.html -->
+    <header id="navbar">
+        <div class="nav-container">
+            <div class="logo">
+                <a href="/index.html">
+                    <img src="/assets/company_logo.png" alt="Denizns Ltd Logo">
+                </a>
+            </div>
+            <nav class="nav-links">
+                <a href="about_us.html">About Us</a>
+                <a href="careers.html">Careers</a>
+                <a href="success_stories.html">Success Stories</a>
+                <a href="contact_us.html">Contact</a>
+            </nav>
+        </div>
+    </header>
+
+    <!-- Careers Hero -->
+    <section class="hero">
+        <div class="blob-bg"></div>
+        <div class="hero-content fade-up">
+            <h1>Build a Career That Cares</h1>
+            <p>Join our network of compassionate professionals and change lives every day.</p>
+        </div>
+    </section>
+
+    <!-- Job Listings Section -->
+    <section class="jobs-section fade-up">
+        <h2>Open Positions</h2>
+        <div class="jobs-grid">
+            <div class="job-card">
+                <h3>Care Assistant - London</h3>
+                <p>Support residents in care homes with daily activities. Flexible hours available.</p>
+                <a href="#" class="apply-button">Apply Now</a>
+            </div>
+            <div class="job-card">
+                <h3>Community Support Worker - Manchester</h3>
+                <p>Engage with individuals in the community, helping them navigate care pathways.</p>
+                <a href="#" class="apply-button">Apply Now</a>
+            </div>
+            <div class="job-card">
+                <h3>Senior Nurse - Birmingham</h3>
+                <p>Lead a team of caregivers and ensure high-quality nursing care is delivered daily.</p>
+                <a href="#" class="apply-button">Apply Now</a>
+            </div>
+        </div>
+    </section>
+
+    <!-- CTA Section -->
+    <section class="cta-block fade-up">
+        <p>Don't see your role listed? Let's talk about how you can make a difference.</p>
+        <a href="contact_us.html" class="cta-button">Reach Out</a>
+    </section>
+
+    <!-- Footer Reused from index.html -->
+    <footer id="footer">
+        <div class="footer-content">
+            <div class="footer-links">
+                <a href="about_us.html">About Us</a>
+                <a href="careers.html">Careers</a>
+                <a href="contact_us.html">Get Started</a>
+                <a href="success_stories.html">Success Stories</a>
+            </div>
+            <p>© 2025 Denizns Ltd. All rights reserved.</p>
+        </div>
+    </footer>
+
+    <script>
+        const observer = new IntersectionObserver(entries => {
+            entries.forEach(entry => {
+                if(entry.isIntersecting){
+                    entry.target.classList.add('active');
+                }
+            });
+        });
+
+        document.querySelectorAll('.fade-up').forEach(el => {
+            observer.observe(el);
+        });
+    </script>
+</body>
+</html>
